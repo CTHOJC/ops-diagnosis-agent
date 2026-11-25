@@ -1,0 +1,1 @@
+{"description":"Java 进程 OOM 被杀，日志出现 Out of memory: Killed process，服务实例掉线","fingerprint":"web-api:oom:killed","service":"web-api","severity":"P1","source":"demo","title":"内存 OOM，实例被杀"}

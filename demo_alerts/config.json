@@ -1,0 +1,1 @@
+{"description": "配置变更引发异常，限流阈值被误改，接口大量返回 429，疑似限流阈值误改", "fingerprint": "web-api:config:ratelimit", "service": "web-api", "severity": "P2", "source": "demo", "title": "配置变更引发异常，限流阈值误改"}

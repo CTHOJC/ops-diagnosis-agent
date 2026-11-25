@@ -1,0 +1,1 @@
+{"description": "下游服务 downstream timeout，下游 payment-service 响应变慢，大量请求超时等待，疑似下游慢且无熔断，错误率上升", "fingerprint": "web-api:downstream:timeout", "service": "web-api", "severity": "P1", "source": "demo", "title": "下游超时，接口雪崩"}

@@ -1,0 +1,1 @@
+{"description": "HTTPS 证书过期，证书已到期，TLS 握手失败，浏览器报 certificate expired", "fingerprint": "web-api:cert:expired", "service": "web-api", "severity": "P1", "source": "demo", "title": "HTTPS 证书过期，握手失败"}

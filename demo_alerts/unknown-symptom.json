@@ -1,0 +1,1 @@
+{"description":"用户反馈网站页面字体突然变大，样式错乱，刷新后仍然存在；无错误日志、无指标异常、无匹配手册——Day 5 未知型故障测试（计划第 9 章场景 15）：证据不支持任何已知根因，诊断必须输出 unknown 并转人工，绝不能编造根因","fingerprint":"web-api:unknown:font-css","service":"web-api","severity":"P3","source":"demo","title":"页面样式异常，字体突然变大"}

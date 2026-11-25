@@ -1,0 +1,1 @@
+{"description": "连接池耗尽，connection pool exhausted，等待连接的线程持续增加，疑似连接泄漏", "fingerprint": "web-api:pool:exhausted", "service": "web-api", "severity": "P1", "source": "demo", "title": "连接池耗尽，请求等待"}

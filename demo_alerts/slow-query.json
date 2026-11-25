@@ -1,0 +1,1 @@
+{"description": "数据库慢查询增多，慢日志出现 slow query 耗时 12 秒，全表扫描疑似缺索引，出现锁等待，接口 P95 延迟升至 2400ms", "fingerprint": "web-api:slowquery:lock", "service": "web-api", "severity": "P2", "source": "demo", "title": "数据库慢查询，接口延迟上升"}

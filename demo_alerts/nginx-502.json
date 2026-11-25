@@ -1,0 +1,1 @@
+{"description":"用户访问返回 502 Bad Gateway，Nginx 错误日志出现 connect() failed (111: Connection refused) 或 upstream timed out，监控显示上游服务存活但 Nginx 到上游的请求失败率超过 5%","fingerprint":"web-api:502:upstream","service":"web-api","severity":"P1","source":"demo","title":"Nginx 返回 502，错误率上升"}

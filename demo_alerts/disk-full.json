@@ -1,0 +1,1 @@
+{"description": "磁盘写满，磁盘使用率 100%，日志出现 No space left on device，写入失败；已删除文件仍被进程占用，磁盘空间未释放", "fingerprint": "web-api:disk:full", "service": "web-api", "severity": "P2", "source": "demo", "title": "磁盘写满，写入失败"}

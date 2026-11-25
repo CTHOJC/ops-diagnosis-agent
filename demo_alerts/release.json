@@ -1,0 +1,1 @@
+{"description": "发布 v1.4.2 后错误率上升，新版本疑似存在缺陷，异常堆栈增多，疑似 release regression，建议回滚", "fingerprint": "web-api:release:v142", "service": "web-api", "severity": "P1", "source": "demo", "title": "发布后错误率上升"}

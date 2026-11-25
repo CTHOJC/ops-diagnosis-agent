@@ -1,0 +1,20 @@
+# generated runtime state (audit trail, local demo state)
+data/
+demo_service/state.json
+demo_service/es-fallback.jsonl
+mcp_server/audit.jsonl
+# python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+# secrets / local config
+.env
+.env.*
+*.pem
+*.key
+# os / editor
+.DS_Store
+.idea/
+.vscode/

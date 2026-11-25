@@ -1,0 +1,592 @@
+{
+  "generated_at": "2026-11-20 10:44:39",
+  "isolation": {
+    "cases_dir": "/tmp/ops-agent-eval-cases-0uej73v8",
+    "cases_env_var": "OPS_AGENT_CASES_DIR",
+    "real_cases_dir_untouched": "data/cases",
+    "dedup_reset": true,
+    "diagnosis_engine": "rule"
+  },
+  "summary": {
+    "diagnosis_scenarios": 14,
+    "top1_hits": 14,
+    "top1_rate": 1.0,
+    "top3_hits": 14,
+    "top3_rate": 1.0,
+    "mean_evidence_completeness": 1.0,
+    "total_misoperations": 0,
+    "mean_duration_s": 0.3,
+    "dedup_ok": true,
+    "dedup_events_created": 1
+  },
+  "scenarios": [
+    {
+      "incident_id": "INC-20261120-104439-785",
+      "status": "done",
+      "category": "cpu_saturated",
+      "top1_cause": "CPU 打满",
+      "top1_confidence": 1.0,
+      "top1_hit": true,
+      "top3_hit": true,
+      "top3": [
+        [
+          "CPU 打满",
+          1.0
+        ],
+        [
+          "上游实例宕机",
+          0.0
+        ],
+        [
+          "内存 OOM 被杀",
+          0.0
+        ]
+      ],
+      "evidence_count": 7,
+      "evidence_cited": 5,
+      "evidence_completeness": 1.0,
+      "misoperations": 0,
+      "recovered": true,
+      "is_unknown": false,
+      "high_risk_executed": [
+        "restart_service"
+      ],
+      "id": 1,
+      "name": "CPU 打满",
+      "expected_cause": "CPU 打满",
+      "fault": "cpu",
+      "alert": "cpu",
+      "evidence_source": "指标 + 日志",
+      "duration_s": 0.29
+    },
+    {
+      "incident_id": "INC-20261120-104440-233",
+      "status": "done",
+      "category": "oom_killed",
+      "top1_cause": "内存 OOM 被杀",
+      "top1_confidence": 1.0,
+      "top1_hit": true,
+      "top3_hit": true,
+      "top3": [
+        [
+          "内存 OOM 被杀",
+          1.0
+        ],
+        [
+          "磁盘写满",
+          0.5
+        ],
+        [
+          "上游实例宕机",
+          0.0
+        ]
+      ],
+      "evidence_count": 5,
+      "evidence_cited": 3,
+      "evidence_completeness": 1.0,
+      "misoperations": 0,
+      "recovered": true,
+      "is_unknown": false,
+      "high_risk_executed": [
+        "restart_service"
+      ],
+      "id": 2,
+      "name": "内存 OOM 被杀",
+      "expected_cause": "内存 OOM 被杀",
+      "fault": "oom",
+      "alert": "oom",
+      "evidence_source": "日志 + 状态",
+      "duration_s": 0.29
+    },
+    {
+      "incident_id": "INC-20261120-104440-677",
+      "status": "done",
+      "category": "upstream_down",
+      "top1_cause": "上游实例宕机",
+      "top1_confidence": 1.0,
+      "top1_hit": true,
+      "top3_hit": true,
+      "top3": [
+        [
+          "上游实例宕机",
+          1.0
+        ],
+        [
+          "内存 OOM 被杀",
+          0.33
+        ],
+        [
+          "CPU 打满",
+          0.0
+        ]
+      ],
+      "evidence_count": 8,
+      "evidence_cited": 6,
+      "evidence_completeness": 1.0,
+      "misoperations": 0,
+      "recovered": true,
+      "is_unknown": false,
+      "high_risk_executed": [
+        "restart_service"
+      ],
+      "id": 3,
+      "name": "接口大面积 502",
+      "expected_cause": "上游实例宕机",
+      "fault": null,
+      "alert": "nginx-502",
+      "evidence_source": "日志 + 状态",
+      "duration_s": 0.3
+    },
+    {
+      "incident_id": "INC-20261120-104441-133",
+      "status": "done",
+      "category": "slow_query",
+      "top1_cause": "数据库慢查询",
+      "top1_confidence": 1.0,
+      "top1_hit": true,
+      "top3_hit": true,
+      "top3": [
+        [
+          "数据库慢查询",
+          1.0
+        ],
+        [
+          "CPU 打满",
+          0.67
+        ],
+        [
+          "下游超时雪崩",
+          0.33
+        ]
+      ],
+      "evidence_count": 7,
+      "evidence_cited": 5,
+      "evidence_completeness": 1.0,
+      "misoperations": 0,
+      "recovered": true,
+      "is_unknown": false,
+      "high_risk_executed": [
+        "restart_service"
+      ],
+      "id": 4,
+      "name": "数据库慢查询",
+      "expected_cause": "数据库慢查询",
+      "fault": "slowquery",
+      "alert": "slow-query",
+      "evidence_source": "慢日志 + 指标",
+      "duration_s": 0.3
+    },
+    {
+      "incident_id": "INC-20261120-104441-590",
+      "status": "done",
+      "category": "disk_full",
+      "top1_cause": "磁盘写满",
+      "top1_confidence": 1.0,
+      "top1_hit": true,
+      "top3_hit": true,
+      "top3": [
+        [
+          "磁盘写满",
+          1.0
+        ],
+        [
+          "上游实例宕机",
+          0.0
+        ],
+        [
+          "内存 OOM 被杀",
+          0.0
+        ]
+      ],
+      "evidence_count": 6,
+      "evidence_cited": 4,
+      "evidence_completeness": 1.0,
+      "misoperations": 0,
+      "recovered": true,
+      "is_unknown": false,
+      "high_risk_executed": [
+        "restart_service"
+      ],
+      "id": 5,
+      "name": "磁盘写满",
+      "expected_cause": "磁盘写满",
+      "fault": "disk",
+      "alert": "disk-full",
+      "evidence_source": "指标 + 日志",
+      "duration_s": 0.3
+    },
+    {
+      "incident_id": "INC-20261120-104442-044",
+      "status": "done",
+      "category": "release_regression",
+      "top1_cause": "发布后错误率上升",
+      "top1_confidence": 1.0,
+      "top1_hit": true,
+      "top3_hit": true,
+      "top3": [
+        [
+          "发布后错误率上升",
+          1.0
+        ],
+        [
+          "上游实例宕机",
+          0.0
+        ],
+        [
+          "内存 OOM 被杀",
+          0.0
+        ]
+      ],
+      "evidence_count": 5,
+      "evidence_cited": 3,
+      "evidence_completeness": 1.0,
+      "misoperations": 0,
+      "recovered": true,
+      "is_unknown": false,
+      "high_risk_executed": [
+        "rollback_release"
+      ],
+      "id": 6,
+      "name": "发布后错误率上升",
+      "expected_cause": "发布后错误率上升",
+      "fault": "release",
+      "alert": "release",
+      "evidence_source": "发布记录 + 日志",
+      "duration_s": 0.3
+    },
+    {
+      "incident_id": "INC-20261120-104442-498",
+      "status": "done",
+      "category": "downstream_timeout",
+      "top1_cause": "下游超时雪崩",
+      "top1_confidence": 1.0,
+      "top1_hit": true,
+      "top3_hit": true,
+      "top3": [
+        [
+          "下游超时雪崩",
+          1.0
+        ],
+        [
+          "数据库慢查询",
+          0.33
+        ],
+        [
+          "配置变更引发异常",
+          0.33
+        ]
+      ],
+      "evidence_count": 5,
+      "evidence_cited": 3,
+      "evidence_completeness": 1.0,
+      "misoperations": 0,
+      "recovered": true,
+      "is_unknown": false,
+      "high_risk_executed": [
+        "restart_service"
+      ],
+      "id": 7,
+      "name": "下游超时雪崩",
+      "expected_cause": "下游超时雪崩",
+      "fault": "downstream",
+      "alert": "downstream",
+      "evidence_source": "指标 + 日志",
+      "duration_s": 0.3
+    },
+    {
+      "incident_id": "INC-20261120-104442-979",
+      "status": "done",
+      "category": "pool_exhausted",
+      "top1_cause": "连接池耗尽",
+      "top1_confidence": 1.0,
+      "top1_hit": true,
+      "top3_hit": true,
+      "top3": [
+        [
+          "连接池耗尽",
+          1.0
+        ],
+        [
+          "数据库慢查询",
+          0.33
+        ],
+        [
+          "下游超时雪崩",
+          0.33
+        ]
+      ],
+      "evidence_count": 5,
+      "evidence_cited": 3,
+      "evidence_completeness": 1.0,
+      "misoperations": 0,
+      "recovered": true,
+      "is_unknown": false,
+      "high_risk_executed": [
+        "restart_service"
+      ],
+      "id": 8,
+      "name": "连接池耗尽",
+      "expected_cause": "连接池耗尽",
+      "fault": "pool",
+      "alert": "pool",
+      "evidence_source": "指标 + 日志",
+      "duration_s": 0.31
+    },
+    {
+      "incident_id": "INC-20261120-104443-446",
+      "status": "done",
+      "category": "config_change",
+      "top1_cause": "配置变更引发异常",
+      "top1_confidence": 1.0,
+      "top1_hit": true,
+      "top3_hit": true,
+      "top3": [
+        [
+          "配置变更引发异常",
+          1.0
+        ],
+        [
+          "发布后错误率上升",
+          0.33
+        ],
+        [
+          "上游实例宕机",
+          0.0
+        ]
+      ],
+      "evidence_count": 5,
+      "evidence_cited": 3,
+      "evidence_completeness": 1.0,
+      "misoperations": 0,
+      "recovered": true,
+      "is_unknown": false,
+      "high_risk_executed": [
+        "update_config"
+      ],
+      "id": 9,
+      "name": "配置变更引发异常",
+      "expected_cause": "配置变更引发异常",
+      "fault": "config",
+      "alert": "config",
+      "evidence_source": "配置快照对比",
+      "duration_s": 0.3
+    },
+    {
+      "incident_id": "INC-20261120-104443-929",
+      "status": "done",
+      "category": "cert_expired",
+      "top1_cause": "证书过期",
+      "top1_confidence": 1.0,
+      "top1_hit": true,
+      "top3_hit": true,
+      "top3": [
+        [
+          "证书过期",
+          1.0
+        ],
+        [
+          "缓存击穿",
+          0.33
+        ],
+        [
+          "上游实例宕机",
+          0.0
+        ]
+      ],
+      "evidence_count": 5,
+      "evidence_cited": 3,
+      "evidence_completeness": 1.0,
+      "misoperations": 0,
+      "recovered": true,
+      "is_unknown": false,
+      "high_risk_executed": [
+        "restart_service"
+      ],
+      "id": 10,
+      "name": "证书过期",
+      "expected_cause": "证书过期",
+      "fault": "cert",
+      "alert": "cert",
+      "evidence_source": "日志 + 状态",
+      "duration_s": 0.35
+    },
+    {
+      "incident_id": "INC-20261120-104444-413",
+      "status": "done",
+      "category": "mq_backlog",
+      "top1_cause": "消息队列积压",
+      "top1_confidence": 1.0,
+      "top1_hit": true,
+      "top3_hit": true,
+      "top3": [
+        [
+          "消息队列积压",
+          1.0
+        ],
+        [
+          "上游实例宕机",
+          0.0
+        ],
+        [
+          "内存 OOM 被杀",
+          0.0
+        ]
+      ],
+      "evidence_count": 5,
+      "evidence_cited": 3,
+      "evidence_completeness": 1.0,
+      "misoperations": 0,
+      "recovered": true,
+      "is_unknown": false,
+      "high_risk_executed": [
+        "restart_service"
+      ],
+      "id": 11,
+      "name": "消息队列积压",
+      "expected_cause": "消息队列积压",
+      "fault": "mq",
+      "alert": "mq",
+      "evidence_source": "指标",
+      "duration_s": 0.31
+    },
+    {
+      "incident_id": "INC-20261120-104444-874",
+      "status": "done",
+      "category": "cache_breakdown",
+      "top1_cause": "缓存击穿",
+      "top1_confidence": 1.0,
+      "top1_hit": true,
+      "top3_hit": true,
+      "top3": [
+        [
+          "缓存击穿",
+          1.0
+        ],
+        [
+          "证书过期",
+          0.33
+        ],
+        [
+          "上游实例宕机",
+          0.25
+        ]
+      ],
+      "evidence_count": 5,
+      "evidence_cited": 3,
+      "evidence_completeness": 1.0,
+      "misoperations": 0,
+      "recovered": true,
+      "is_unknown": false,
+      "high_risk_executed": [
+        "restart_service"
+      ],
+      "id": 12,
+      "name": "缓存击穿",
+      "expected_cause": "缓存击穿",
+      "fault": "cache",
+      "alert": "cache",
+      "evidence_source": "指标 + 日志",
+      "duration_s": 0.3
+    },
+    {
+      "incident_id": "INC-20261120-104445-334",
+      "status": "done",
+      "category": "network_jitter",
+      "top1_cause": "单实例网络抖动",
+      "top1_confidence": 1.0,
+      "top1_hit": true,
+      "top3_hit": true,
+      "top3": [
+        [
+          "单实例网络抖动",
+          1.0
+        ],
+        [
+          "上游实例宕机",
+          0.0
+        ],
+        [
+          "内存 OOM 被杀",
+          0.0
+        ]
+      ],
+      "evidence_count": 5,
+      "evidence_cited": 3,
+      "evidence_completeness": 1.0,
+      "misoperations": 0,
+      "recovered": true,
+      "is_unknown": false,
+      "high_risk_executed": [
+        "restart_service"
+      ],
+      "id": 13,
+      "name": "单实例网络抖动",
+      "expected_cause": "单实例网络抖动",
+      "fault": "jitter",
+      "alert": "jitter",
+      "evidence_source": "指标 + 状态",
+      "duration_s": 0.3
+    },
+    {
+      "id": 14,
+      "name": "重复告警风暴",
+      "expected_cause": null,
+      "fault": "cpu",
+      "alert": "cpu",
+      "evidence_source": "去重逻辑验证",
+      "demos_sent": 3,
+      "events_created": 1,
+      "created_incidents": [
+        "INC-20261120-104445-789"
+      ],
+      "merged_into": [
+        "INC-20261120-104445-789",
+        "INC-20261120-104445-789"
+      ],
+      "dedup_ok": true,
+      "first_event_top1": "CPU 打满",
+      "first_event_top1_confidence": 1.0,
+      "first_event_top1_hit": true,
+      "evidence_count": 7,
+      "misoperations": 0,
+      "closed_status": "done",
+      "recovered": true
+    },
+    {
+      "incident_id": "INC-20261120-104446-637",
+      "status": "done",
+      "category": "unknown",
+      "top1_cause": "未知型故障，需转人工",
+      "top1_confidence": 0.0,
+      "top1_hit": true,
+      "top3_hit": true,
+      "top3": [
+        [
+          "未知型故障，需转人工",
+          0.0
+        ]
+      ],
+      "evidence_count": 2,
+      "evidence_cited": 0,
+      "evidence_completeness": 1.0,
+      "misoperations": 0,
+      "recovered": true,
+      "is_unknown": true,
+      "high_risk_executed": [],
+      "id": 15,
+      "name": "未知型故障",
+      "expected_cause": "未知型故障，需转人工",
+      "fault": null,
+      "alert": "unknown",
+      "evidence_source": "应转人工，不编造",
+      "duration_s": 0.3,
+      "unknown_checks": {
+        "is_unknown": true,
+        "top1_below_threshold": true,
+        "only_low_risk_actions": true,
+        "needs_human": true
+      },
+      "unknown_ok": true
+    }
+  ]
+}

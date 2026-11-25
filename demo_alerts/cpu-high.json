@@ -1,0 +1,1 @@
+{"description":"CPU 持续打满，load 冲高，接口 P95 延迟上升，疑似死循环或异常流量","fingerprint":"web-api:cpu:hot-loop","service":"web-api","severity":"P2","source":"demo","title":"CPU 打满，接口延迟上升"}

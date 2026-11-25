@@ -1,0 +1,1 @@
+{"description": "单实例网络抖动，web-api-2 网络丢包 35%，延迟突刺，其他实例正常", "fingerprint": "web-api:jitter:web-api-2", "service": "web-api", "severity": "P2", "source": "demo", "title": "单实例网络抖动，丢包上升"}

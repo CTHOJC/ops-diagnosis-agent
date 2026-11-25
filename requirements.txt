@@ -1,0 +1,11 @@
+# Stdlib + numpy for the Day 6 retrieval (BM25 + TF-IDF + RRF, app/retrieval.py).
+# numpy 1.26.4 is already installed on this machine; no torch /
+# sentence-transformers (the cross-encoder reranker is probed, not
+# installed — see app/retrieval.py).
+#   numpy==1.26.4
+# langgraph is optional: build_graph() in app/graph.py uses it when installed,
+# otherwise the sequential runner in the same file executes the same nodes
+# and conditional edges. It is not installed on this machine and not
+# needed to run the demo; install it only if the real LangGraph wiring
+# lands:
+#   langgraph

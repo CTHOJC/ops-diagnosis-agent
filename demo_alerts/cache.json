@@ -1,0 +1,1 @@
+{"description": "缓存击穿，热点 Key 过期，大量请求直达数据库，疑似热点 Key 过期", "fingerprint": "web-api:cache:hotkey", "service": "web-api", "severity": "P2", "source": "demo", "title": "缓存击穿，热点 Key 过期"}
