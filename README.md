@@ -4,6 +4,8 @@
 用户 2026-11-16 确认“按照方案先执行”，方案本身不改，骨架提前一周搭起来；
 第 2–12 天同日/次日跟进完成，第 13–14 天做联调、演示与收尾（见文末）。
 
+> Clone 后运行：`git clone https://github.com/CTHOJC/ops-diagnosis-agent.git && cd ops-diagnosis-agent`，其余命令同下文（下文的 `~/workspace/goals/ai/files/ops-agent` 是本机路径，clone 后目录名为 `ops-diagnosis-agent`）。需要 Python 3.12+ 与 numpy 1.26.4；`../ops-agent-plan/ops-agent-plan.pdf` 不在仓库内。
+
 ## 快速开始（第一次拿到这个项目，5 分钟跑通主链路）
 
 ```bash
